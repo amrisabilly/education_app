@@ -167,8 +167,7 @@
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div>
-                    <p class="text-4xl md:text-5xl font-bold mb-2">10K+</p>
-                    <p class="text-blue-100 text-sm md:text-base">Siswa Aktif</p>
+                    <p class="text-white text-sm md:text-base">10K+ Siswa Aktif</p>
                 </div>
                 <div>
                     <p class="text-4xl md:text-5xl font-bold mb-2">500+</p>

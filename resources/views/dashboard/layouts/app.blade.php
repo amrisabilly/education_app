@@ -5,11 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'Dashboard') - Eduinklusif</title>
+    <title>Eduinklusif - Belajar Tanpa Batas</title>
+    <meta name="description"
+        content="Eduinklusif adalah platform edukasi digital yang menyediakan ribuan materi video interaktif dan bank soal untuk berkembang tanpa henti.">
     <link rel="shortcut icon" href="{{ asset('assets/images/landing/favicion/logo_eduinklusif.webp') }}"
         type="image/x-icon" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @stack('styles')
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://lottie.host">
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module" defer>
+    </script>
 </head>
 
 <body class="bg-gray-100">
