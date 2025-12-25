@@ -22,7 +22,7 @@
             <!-- User Menu -->
             <div class="relative" x-data="{ open: false }">
                 <button @click="open = !open" class="flex items-center space-x-2 text-gray-700 hover:text-gray-900">
-                    <img src="{{ auth()->user()->photo ?? 'https://ui-avatars.com/api/?name=' . urlencode(auth()->user()->name) }}"
+                    <img src="{{ auth()->user()->photo ? asset('storage/' . auth()->user()->photo) : 'https://ui-avatars.com/api/?name=' . urlencode(auth()->user()->name) }}"
                         alt="{{ auth()->user()->name }}" class="h-8 w-8 rounded-full">
                     <span class="text-sm font-medium">{{ auth()->user()->name }}</span>
                     <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">

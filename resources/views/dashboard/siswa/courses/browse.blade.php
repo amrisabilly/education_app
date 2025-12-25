@@ -56,7 +56,7 @@
                             <p class="text-gray-600 text-sm mb-4 line-clamp-3">{{ $course->description }}</p>
 
                             <div class="flex items-center text-sm text-gray-500 mb-4">
-                                <img src="{{ $course->teacher->photo ?? 'https://ui-avatars.com/api/?name=' . urlencode($course->teacher->name) }}"
+                                <img src="{{ $course->teacher->photo ? asset('storage/' . $course->teacher->photo) : 'https://ui-avatars.com/api/?name=' . urlencode($course->teacher->name) }}"
                                     alt="{{ $course->teacher->name }}" class="h-6 w-6 rounded-full mr-2">
                                 <span>{{ $course->teacher->name }}</span>
                             </div>

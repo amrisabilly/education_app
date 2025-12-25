@@ -83,7 +83,7 @@
                             <div class="border border-gray-200 rounded-lg p-6 hover:border-purple-500 transition">
                                 <div class="flex items-start justify-between">
                                     <div class="flex items-center flex-1">
-                                        <img src="{{ $child->photo ?? 'https://ui-avatars.com/api/?name=' . urlencode($child->name) }}"
+                                        <img src="{{ $child->photo ? asset('storage/' . $child->photo) : 'https://ui-avatars.com/api/?name=' . urlencode($child->name) }}"
                                             alt="{{ $child->name }}" class="h-16 w-16 rounded-full">
                                         <div class="ml-4">
                                             <h3 class="text-lg font-semibold text-gray-800">{{ $child->name }}</h3>

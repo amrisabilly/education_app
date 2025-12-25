@@ -14,7 +14,7 @@
 
                     <div class="flex items-center mt-4 space-x-6 text-sm text-gray-600">
                         <span class="flex items-center">
-                            <img src="{{ $course->teacher->photo ?? 'https://ui-avatars.com/api/?name=' . urlencode($course->teacher->name) }}"
+                            <img src="{{ $course->teacher->photo ? asset('storage/' . $course->teacher->photo) : 'https://ui-avatars.com/api/?name=' . urlencode($course->teacher->name) }}"
                                 alt="{{ $course->teacher->name }}" class="h-6 w-6 rounded-full mr-2">
                             {{ $course->teacher->name }}
                         </span>

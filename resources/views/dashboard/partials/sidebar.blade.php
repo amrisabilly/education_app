@@ -102,7 +102,7 @@
 
     {{-- <div class="p-4 border-t border-blue-700">
         <div class="flex items-center">
-            <img src="{{ auth()->user()->photo ?? 'https://ui-avatars.com/api/?name=' . urlencode(auth()->user()->name) }}"
+            <img src="{{ auth()->user()->photo ? asset('storage/' . auth()->user()->photo) : 'https://ui-avatars.com/api/?name=' . urlencode(auth()->user()->name) }}"
                 alt="{{ auth()->user()->name }}" class="h-10 w-10 rounded-full">
             <div class="ml-3">
                 <p class="text-sm font-medium text-white">{{ auth()->user()->name }}</p>

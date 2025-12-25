@@ -8,7 +8,7 @@
         <!-- Child Info Header -->
         <div class="bg-white rounded-lg shadow p-6">
             <div class="flex items-center space-x-4">
-                <img src="{{ $child->photo ?? 'https://ui-avatars.com/api/?name=' . urlencode($child->name) }}"
+                <img src="{{ $child->photo ? asset('storage/' . $child->photo) : 'https://ui-avatars.com/api/?name=' . urlencode($child->name) }}"
                     alt="{{ $child->name }}" class="h-16 w-16 rounded-full">
                 <div>
                     <h2 class="text-xl font-bold text-gray-800">{{ $child->name }}</h2>

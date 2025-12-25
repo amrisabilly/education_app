@@ -31,7 +31,7 @@
                     <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-6">
                         <div class="flex items-start justify-between">
                             <div class="flex items-start space-x-4">
-                                <img src="{{ $child->photo ?? 'https://ui-avatars.com/api/?name=' . urlencode($child->name) }}"
+                                <img src="{{ $child->photo ? asset('storage/' . $child->photo) : 'https://ui-avatars.com/api/?name=' . urlencode($child->name) }}"
                                     alt="{{ $child->name }}" class="h-20 w-20 rounded-full">
                                 <div>
                                     <h3 class="text-xl font-semibold text-gray-800">{{ $child->name }}</h3>

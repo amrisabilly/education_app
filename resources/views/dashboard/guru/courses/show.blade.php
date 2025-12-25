@@ -195,7 +195,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         @foreach ($course->students as $student)
                             <div class="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg">
-                                <img src="{{ $student->photo ?? 'https://ui-avatars.com/api/?name=' . urlencode($student->name) }}"
+                                <img src="{{ $student->photo ? asset('storage/' . $student->photo) : 'https://ui-avatars.com/api/?name=' . urlencode($student->name) }}"
                                     alt="{{ $student->name }}" class="h-12 w-12 rounded-full">
                                 <div>
                                     <h4 class="font-medium text-gray-800">{{ $student->name }}</h4>
